@@ -58,7 +58,7 @@ class MessageSenderImplTest {
         Mockito.when(geoService.byIp(ip)).thenReturn(new Location(null, null, null, 0));
 
         LocalizationService localizationService = Mockito.mock(LocalizationService.class);
-        Mockito.when(localizationService.locale(Country.USA)).thenReturn("Welcome");
+        Mockito.when(localizationService.locale(null)).thenReturn("Welcome");
 
         MessageSender messageSender = new MessageSenderImpl(geoService, localizationService);
 
